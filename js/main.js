@@ -185,37 +185,72 @@
 
       var name = form.querySelector('#name').value.trim();
       var email = form.querySelector('#email').value.trim();
-      var phone = form.querySelector('#phone').value.trim();
+      var phone = form.querySelector('#phone') ? form.querySelector('#phone').value.trim() : '';
+      var service = form.querySelector('#service') ? form.querySelector('#service').value : '';
       var message = form.querySelector('#message').value.trim();
+      var consent = form.querySelector('#consent') ? form.querySelector('#consent').checked : false;
 
       // Basic validation
       if (!name || !email || !message) {
-        showFormMessage('Please fill in all required fields.', 'error');
+        showFormMessage('Please fill in all required fields (Name, Email, and Message).', 'error');
         return;
       }
-
       if (!isValidEmail(email)) {
         showFormMessage('Please enter a valid email address.', 'error');
         return;
       }
+      if (!consent) {
+        showFormMessage('Please check the consent box before submitting.', 'error');
+        return;
+      }
 
-      // Build mailto link as fallback (no backend)
-      var subject = encodeURIComponent('New Consultation Request from ' + name);
-      var body = encodeURIComponent(
-        'Name: ' + name + '\n' +
+      // Disable submit button and show loading state
+      var submitBtn = form.querySelector('[type="submit"]');
+      var originalText = submitBtn.textContent;
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending…';
+
+      // Build form data for Web3Forms
+      var formData = new FormData(form);
+      // Add the recipient email override
+      formData.append('to', 'betterdaystherapywellness@gmail.com');
+      // Add a structured message body
+      var fullMessage = 'Name: ' + name + '\n' +
         'Email: ' + email + '\n' +
-        'Phone: ' + (phone || 'Not provided') + '\n\n' +
-        'Message:\n' + message
-      );
+        'Phone: ' + (phone || 'Not provided') + '\n' +
+        'Service of Interest: ' + (service || 'Not specified') + '\n\n' +
+        'Message:\n' + message;
+      formData.set('message', fullMessage);
 
-      window.location.href = 'mailto:betterdaystherapywellness@gmail.com?subject=' + subject + '&body=' + body;
-
-      showFormMessage(
-        'Thank you, ' + name + '. Your message has been prepared. If your email client did not open automatically, please email us directly at betterdaystherapywellness@gmail.com.',
-        'success'
-      );
-
-      form.reset();
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData
+      })
+      .then(function(response) { return response.json(); })
+      .then(function(data) {
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalText;
+        if (data.success) {
+          showFormMessage(
+            'Thank you, ' + name + '. Your message has been received. Dr. Booker will be in touch within one business day.',
+            'success'
+          );
+          form.reset();
+        } else {
+          showFormMessage(
+            'Something went wrong. Please try again or call us directly at (346) 254-7322.',
+            'error'
+          );
+        }
+      })
+      .catch(function() {
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalText;
+        showFormMessage(
+          'Unable to send your message right now. Please call us at (346) 254-7322 or email betterdaystherapywellness@gmail.com.',
+          'error'
+        );
+      });
     });
   }
 
