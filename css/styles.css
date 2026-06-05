@@ -268,8 +268,9 @@ li { margin-bottom: 0.375rem; color: #2d4a4e; line-height: 1.75; }
 }
 
 .hero-logo-wrap img {
-  width: 220px;
-  height: 220px;
+  width: 260px !important;
+  height: 260px !important;
+  max-width: 260px !important;
   object-fit: contain;
   border-radius: 50%;
   display: block;
@@ -381,12 +382,12 @@ li { margin-bottom: 0.375rem; color: #2d4a4e; line-height: 1.75; }
   .nav-links { display: none; }
   .hamburger { display: flex; }
   .nav-wordmark { font-size: 0.95rem; max-width: 160px; }
-  .hero-logo-wrap img { width: 180px; height: 180px; }
+  .hero-logo-wrap img { width: 210px !important; height: 210px !important; max-width: 210px !important; }
 }
 
 @media (max-width: 480px) {
   .nav-wordmark { font-size: 0.875rem; max-width: 140px; }
-  .hero-logo-wrap img { width: 150px; height: 150px; }
+  .hero-logo-wrap img { width: 170px !important; height: 170px !important; max-width: 170px !important; }
 }
 
 /* ─── Trust Bar ─────────────────────────────────────────────────────────────── */
