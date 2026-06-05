@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Disallow legal pages from indexing
+Disallow: /privacy.html
+Disallow: /terms.html
+Disallow: /disclaimer.html
+
+Sitemap: https://betterdaystherapywellness.com/sitemap.xml
