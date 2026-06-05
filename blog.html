@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Healing Insights Blog | Better Days Therapy &amp; Wellness</title>
+  <meta name="description" content="Thoughtful articles on mental health, emotional resilience, relationships, and wellness from Dr. Stephanie Booker, LPC — Better Days Therapy & Wellness, Houston, TX." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://betterdaystherapywellness.com/blog.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Better Days Therapy &amp; Wellness, PLLC" />
+  <meta property="og:title" content="Healing Insights Blog | Better Days Therapy &amp; Wellness" />
+  <meta property="og:description" content="Thoughtful articles on mental health, emotional resilience, relationships, and wellness from Dr. Stephanie Booker, LPC." />
+  <meta property="og:url" content="https://betterdaystherapywellness.com/blog.html" />
+  <meta property="og:image" content="https://betterdaystherapywellness.com/assets/images/hero/hero-bg.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" type="image/x-icon" href="/favicons/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
+  <link rel="manifest" href="/favicons/site.webmanifest" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Healing Insights — Better Days Therapy & Wellness",
+    "url": "https://betterdaystherapywellness.com/blog.html",
+    "description": "Thoughtful articles on mental health, emotional resilience, relationships, and wellness from Dr. Stephanie Booker, LPC.",
+    "publisher": {
+      "@type": "Person",
+      "name": "Dr. Stephanie Booker",
+      "jobTitle": "Licensed Professional Counselor",
+      "url": "https://betterdaystherapywellness.com/about.html"
+    }
+  }
+  </script>
+  <style>
+    /* ── Blog-specific styles ── */
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2.5rem;
+    }
+    .blog-card {
+      background: #fff;
+      border-radius: 1rem;
+      overflow: hidden;
+      box-shadow: 0 2px 16px rgba(26,107,114,0.08);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.22s cubic-bezier(0.23,1,0.32,1), box-shadow 0.22s cubic-bezier(0.23,1,0.32,1);
+      text-decoration: none;
+      color: inherit;
+    }
+    .blog-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 32px rgba(26,107,114,0.15);
+    }
+    .blog-card-accent {
+      height: 6px;
+      background: linear-gradient(90deg, #1A6B72 0%, #C9A84C 100%);
+    }
+    .blog-card-body {
+      padding: 1.75rem 1.75rem 1.5rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .blog-card-meta {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #C9A84C;
+      margin-bottom: 0.75rem;
+    }
+    .blog-card-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #1C2B2D;
+      line-height: 1.35;
+      margin-bottom: 0.875rem;
+    }
+    .blog-card-excerpt {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.925rem;
+      color: #4A5568;
+      line-height: 1.65;
+      flex: 1;
+      margin-bottom: 1.25rem;
+    }
+    .blog-card-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.375rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: #1A6B72;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      transition: gap 0.18s ease;
+    }
+    .blog-card-cta:hover { gap: 0.625rem; }
+    .blog-card-cta svg { flex-shrink: 0; }
+
+    /* Featured / wide card */
+    .blog-card.featured {
+      grid-column: 1 / -1;
+      flex-direction: row;
+    }
+    .blog-card.featured .blog-card-accent {
+      width: 6px;
+      height: auto;
+      background: linear-gradient(180deg, #1A6B72 0%, #C9A84C 100%);
+    }
+    .blog-card.featured .blog-card-body {
+      padding: 2.25rem 2.5rem;
+    }
+    .blog-card.featured .blog-card-title {
+      font-size: 1.6rem;
+    }
+    @media (max-width: 640px) {
+      .blog-card.featured { flex-direction: column; }
+      .blog-card.featured .blog-card-accent {
+        width: 100%;
+        height: 6px;
+        background: linear-gradient(90deg, #1A6B72 0%, #C9A84C 100%);
+      }
+    }
+
+    .blog-tag {
+      display: inline-block;
+      background: rgba(26,107,114,0.08);
+      color: #1A6B72;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      padding: 0.25rem 0.65rem;
+      border-radius: 2rem;
+      margin-bottom: 0.75rem;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="/" class="nav-wordmark" aria-label="Better Days Therapy &amp; Wellness — Home">Better Days Therapy &amp; Wellness</a>
+        <ul class="nav-links" role="list">
+          <li><a href="/" class="nav-link">Home</a></li>
+          <li><a href="/about.html" class="nav-link">About</a></li>
+          <li><a href="/services.html" class="nav-link">Healing Options</a></li>
+          <li><a href="/insurance.html" class="nav-link">Insurance</a></li>
+          <li><a href="/blog.html" class="nav-link active">Blog</a></li>
+          <li><a href="/contact.html" class="nav-link">Contact</a></li>
+          <li><a href="/contact.html" class="btn btn-primary nav-cta">🌿 Schedule a Session Today</a></li>
+        </ul>
+        <button class="hamburger" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open navigation menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div id="mobile-menu" class="mobile-menu" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <button id="mobile-close" aria-label="Close menu" style="position:absolute;top:1.25rem;right:1.25rem;background:none;border:none;cursor:pointer;font-size:1.5rem;color:#1C2B2D;padding:0.5rem;">✕</button>
+    <div style="margin-bottom:2rem;"><img src="/assets/logos/BetterDayslogofinal.png" alt="Better Days Therapy & Wellness" width="72" height="72" style="object-fit:contain;" /></div>
+    <a href="/" class="mobile-nav-link">Home</a>
+    <a href="/about.html" class="mobile-nav-link">About</a>
+    <a href="/services.html" class="mobile-nav-link">Healing Options</a>
+    <a href="/insurance.html" class="mobile-nav-link">Insurance</a>
+    <a href="/blog.html" class="mobile-nav-link">Blog</a>
+    <a href="/contact.html" class="mobile-nav-link">Contact</a>
+    <div style="margin-top:2rem;"><a href="/contact.html" class="btn btn-primary" style="width:100%;justify-content:center;">🌿 Schedule a Session Today</a></div>
+  </div>
+
+  <main id="main-content" tabindex="-1">
+
+    <header class="page-hero" aria-label="Blog page header">
+      <div class="container">
+        <p class="page-hero-label">Healing Insights</p>
+        <h1>Words That Walk With You</h1>
+        <p>Reflections on mental health, emotional resilience, relationships, and the courage it takes to grow — written by Dr. Stephanie Booker, LPC.</p>
+      </div>
+    </header>
+
+    <section class="section bg-cream" aria-labelledby="blog-heading">
+      <div class="container">
+        <div class="section-header fade-up">
+          <p class="section-label">From the Practice</p>
+          <h2 id="blog-heading">Insights for Your Journey</h2>
+          <p class="section-sub">Each article is written with one intention: to meet you where you are and remind you that healing is always possible.</p>
+        </div>
+
+        <div class="blog-grid">
+
+          <!-- Featured Article 1 -->
+          <a href="/blog/how-to-improve-communication-in-your-relationships.html" class="blog-card featured fade-up" aria-label="Read: How to Improve Communication in Your Relationships">
+            <div class="blog-card-accent"></div>
+            <div class="blog-card-body">
+              <span class="blog-tag">Relationships</span>
+              <p class="blog-card-meta">Featured Article</p>
+              <h2 class="blog-card-title">How to Improve Communication in Your Relationships</h2>
+              <p class="blog-card-excerpt">True connection occurs when there is mutual understanding, respect, and empathy. Discover practical strategies — from active listening and non-verbal cues to the Speaker-Listener Technique — that can transform the way you and your partner communicate and build lasting trust.</p>
+              <span class="blog-card-cta">
+                Read the Full Article
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </span>
+            </div>
+          </a>
+
+          <!-- Article 2 -->
+          <a href="/blog/how-to-build-emotional-resilience-in-difficult-times.html" class="blog-card fade-up" aria-label="Read: How to Build Emotional Resilience in Difficult Times">
+            <div class="blog-card-accent"></div>
+            <div class="blog-card-body">
+              <span class="blog-tag">Resilience</span>
+              <p class="blog-card-meta">August 2025</p>
+              <h2 class="blog-card-title">How to Build Emotional Resilience in Difficult Times</h2>
+              <p class="blog-card-excerpt">Think of emotional resilience as your inner toolkit. When life's unpredictability rears its head, resilience ensures you aren't stuck — you are moving forward with confidence. Learn how to cultivate this essential skill through mindfulness, cognitive restructuring, and daily practice.</p>
+              <span class="blog-card-cta">
+                Read the Full Article
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </span>
+            </div>
+          </a>
+
+          <!-- Article 3 -->
+          <a href="/blog/the-importance-of-emotional-awareness.html" class="blog-card fade-up" aria-label="Read: The Importance of Emotional Awareness">
+            <div class="blog-card-accent"></div>
+            <div class="blog-card-body">
+              <span class="blog-tag">Self-Awareness</span>
+              <p class="blog-card-meta">September 5, 2025</p>
+              <h2 class="blog-card-title">The Importance of Emotional Awareness</h2>
+              <p class="blog-card-excerpt">Every emotion is a normal part of life — and each one can help you understand what is happening to you and show you what you might need. Avoiding them does not make them disappear. Learn why acknowledging your emotions is the foundation of lasting healing.</p>
+              <span class="blog-card-cta">
+                Read the Full Article
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </span>
+            </div>
+          </a>
+
+          <!-- Article 4 -->
+          <a href="/blog/whats-in-your-cup.html" class="blog-card fade-up" aria-label="Read: What's in Your Cup?">
+            <div class="blog-card-accent"></div>
+            <div class="blog-card-body">
+              <span class="blog-tag">Wellness</span>
+              <p class="blog-card-meta">August 6, 2025</p>
+              <h2 class="blog-card-title">What's in Your Cup?</h2>
+              <p class="blog-card-excerpt">We know that we cannot pour from an empty cup. But it is equally important to examine the contents of the cup before you begin pouring into others — or allowing them to pour into you. A short, powerful reflection on self-awareness and emotional health.</p>
+              <span class="blog-card-cta">
+                Read the Full Article
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </span>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section" aria-labelledby="blog-cta-heading">
+      <div class="cta-bg" style="background-image:url('/assets/images/misc/garden-path.jpg');" role="img" aria-label="A sunlit garden path leading forward through lush greenery"></div>
+      <div class="cta-overlay" aria-hidden="true"></div>
+      <div class="container">
+        <div class="cta-content fade-up">
+          <h2 id="blog-cta-heading">Ready to Take the Next Step?</h2>
+          <p>Reading is a powerful first step. When you are ready to go deeper, I am here to walk alongside you — with compassion, expertise, and unwavering belief in your capacity to heal and grow.</p>
+          <div class="cta-actions">
+            <a href="tel:+13462547322" class="btn btn-gold btn-lg" aria-label="Call Dr. Booker at (346) 254-7322">📞 (346) 254-7322</a>
+            <a href="/contact.html" class="btn btn-white btn-lg">Schedule a Session</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" aria-label="Site footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-logo"><img src="/assets/logos/BetterDayslogofinal.png" alt="Better Days Therapy & Wellness" width="60" height="60" /></div>
+          <p class="footer-tagline">Guiding your growth. Empowering your path to healing. Compassionate behavioral health services for individuals, couples, and families — wherever you are in your journey.</p>
+          <p class="footer-quote">"Remember that every stumbling block is merely a stepping stone on your pathway to success."</p>
+          <p class="footer-quote-attr">— Dr. Stephanie Booker</p>
+        </div>
+        <div>
+          <h3 class="footer-heading">Quick Links</h3>
+          <a href="/" class="footer-link">Home</a>
+          <a href="/about.html" class="footer-link">About Dr. Booker</a>
+          <a href="/services.html" class="footer-link">Healing Options</a>
+          <a href="/insurance.html" class="footer-link">Insurance &amp; Fees</a>
+          <a href="/blog.html" class="footer-link">Healing Insights Blog</a>
+          <a href="/contact.html" class="footer-link">Contact &amp; Scheduling</a>
+        </div>
+        <div>
+          <h3 class="footer-heading">Contact Information</h3>
+          <p class="footer-contact-label">Phone</p>
+          <p class="footer-contact-value"><a href="tel:+13462547322">(346) 254-7322</a></p>
+          <p class="footer-contact-label">Email</p>
+          <p class="footer-contact-value">
+            <a href="mailto:betterdaystherapywellness@gmail.com" style="color:#1A6B72;font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:0.375rem;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              Send an Email
+            </a>
+          </p>
+          <p class="footer-contact-label">Service Area</p>
+          <p class="footer-contact-value">Houston, Texas &amp; Beyond<br>Telehealth: Texas &amp; Illinois</p>
+          <p class="footer-contact-label">License</p>
+          <p class="footer-contact-value">LPC — Texas &amp; Illinois</p>
+        </div>
+      </div>
+      <hr class="footer-divider" />
+      <div class="footer-bottom">
+        <p>© <span id="footer-year"></span> Better Days Therapy &amp; Wellness, PLLC. All Rights Reserved.</p>
+        <div class="footer-legal-links">
+          <a href="/privacy.html" class="footer-legal-link">Privacy Policy</a>
+          <a href="/terms.html" class="footer-legal-link">Terms of Service</a>
+          <a href="/disclaimer.html" class="footer-legal-link">Disclaimer</a>
+        </div>
+        <p class="footer-built-by">Built by <a href="https://www.kiraunistrategies.com" target="_blank" rel="noopener noreferrer">Kirauni Strategies</a> | Where Strategy Meets Excellence</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="consent-banner" class="consent-banner dismissed" role="region" aria-label="Privacy consent notice" style="display:none;">
+    <p class="consent-text">We respect your privacy. This site uses cookies to improve your experience. By continuing, you agree to our <a href="/privacy.html">Privacy Policy</a>.</p>
+    <div class="consent-actions">
+      <button id="consent-accept" class="consent-accept" aria-label="Accept cookies and dismiss this notice">Accept</button>
+      <a id="consent-learn" href="/privacy.html" class="consent-learn" aria-label="Learn more about our privacy policy">Learn More</a>
+    </div>
+  </div>
+
+  <script src="/js/main.js" defer></script>
+  <script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
