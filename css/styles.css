@@ -233,24 +233,24 @@ li { margin-bottom: 0.375rem; color: #2d4a4e; line-height: 1.75; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.875rem 0;
+  padding: 0.625rem 0;
 }
 
 .nav-logo-wrap {
   background: white;
   border-radius: 50%;
-  padding: 2px;
+  padding: 3px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
   flex-shrink: 0;
   text-decoration: none;
 }
 
 .nav-logo-wrap img {
-  width: 58px;
-  height: 58px;
+  width: 100px;
+  height: 100px;
   object-fit: contain;
   border-radius: 50%;
 }
@@ -360,6 +360,11 @@ li { margin-bottom: 0.375rem; color: #2d4a4e; line-height: 1.75; }
 @media (max-width: 900px) {
   .nav-links { display: none; }
   .hamburger { display: flex; }
+  .nav-logo-wrap img { width: 80px; height: 80px; }
+}
+
+@media (max-width: 480px) {
+  .nav-logo-wrap img { width: 68px; height: 68px; }
 }
 
 /* ─── Trust Bar ─────────────────────────────────────────────────────────────── */
@@ -1012,8 +1017,8 @@ textarea.form-input {
 }
 
 .footer-brand-logo img {
-  width: 60px;
-  height: 60px;
+  width: 80px;
+  height: 80px;
   object-fit: contain;
   border-radius: 50%;
 }

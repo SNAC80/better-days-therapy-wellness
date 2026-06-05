@@ -208,10 +208,10 @@
         'Message:\n' + message
       );
 
-      window.location.href = 'mailto:info@betterdaystherapy.com?subject=' + subject + '&body=' + body;
+      window.location.href = 'mailto:betterdaystherapywellness@gmail.com?subject=' + subject + '&body=' + body;
 
       showFormMessage(
-        'Thank you, ' + name + '. Your message has been prepared. If your email client did not open automatically, please email us directly at info@betterdaystherapy.com.',
+        'Thank you, ' + name + '. Your message has been prepared. If your email client did not open automatically, please email us directly at betterdaystherapywellness@gmail.com.',
         'success'
       );
 
