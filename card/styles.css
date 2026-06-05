@@ -188,6 +188,17 @@ h1 {
   background: var(--white);
 }
 
+.logo-only-front {
+  gap: 0;
+}
+
+.logo-medallion-large {
+  width: min(76%, 17rem);
+  height: auto;
+  aspect-ratio: 1;
+  padding: 0.75rem;
+}
+
 .card-name,
 .back-heading {
   z-index: 1;
@@ -230,15 +241,32 @@ h1 {
   transform: rotateY(180deg);
   border: 1px solid rgba(26, 107, 114, 0.16);
   pointer-events: none;
+  gap: 0.48rem;
 }
 
 .flip-area.is-flipped .card-back {
   pointer-events: auto;
 }
 
+.card-back .card-name {
+  color: var(--teal-dark);
+  font-size: 1.42rem;
+}
+
+.card-back .card-title {
+  color: var(--gold);
+  margin-top: -0.1rem;
+}
+
+.card-back .card-business {
+  color: #31575b;
+  margin-bottom: 0.2rem;
+}
+
 .back-heading {
   color: var(--teal-dark);
-  margin-bottom: 0.45rem;
+  margin: 0.2rem 0 0.25rem;
+  font-size: 1.18rem;
 }
 
 .contact-line {
@@ -396,6 +424,11 @@ h1 {
   .logo-medallion {
     width: 9.5rem;
     height: 9.5rem;
+  }
+
+  .logo-medallion-large {
+    width: min(76%, 15rem);
+    height: auto;
   }
 
   .card-face {

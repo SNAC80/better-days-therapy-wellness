@@ -7,41 +7,24 @@ if (flipCard) {
     flipCard.setAttribute('aria-pressed', String(isFlipped));
   };
 
-  let isFlipped = false;
-  let autoFlipTimer;
-
-  const scheduleAutoFlip = () => {
-    window.clearInterval(autoFlipTimer);
-    autoFlipTimer = window.setInterval(() => {
-      isFlipped = !isFlipped;
-      setFlippedState(isFlipped);
-    }, 3600);
-  };
+  const revealContactSide = () => setFlippedState(true);
 
   flipCard.addEventListener('click', (event) => {
     if (event.target.closest('a')) return;
-    isFlipped = !isFlipped;
-    setFlippedState(isFlipped);
-    scheduleAutoFlip();
+    revealContactSide();
   });
 
   flipCard.addEventListener('keydown', (event) => {
     if (event.key !== 'Enter' && event.key !== ' ') return;
     event.preventDefault();
-    isFlipped = !isFlipped;
-    setFlippedState(isFlipped);
-    scheduleAutoFlip();
+    revealContactSide();
   });
 
   flipCard.querySelectorAll('a').forEach((link) => {
     link.addEventListener('click', (event) => event.stopPropagation());
   });
 
-  window.setTimeout(() => {
-    isFlipped = true;
-    setFlippedState(isFlipped);
-    scheduleAutoFlip();
-  }, 1600);
+  window.setTimeout(revealContactSide, 1800);
 }
 
 if (saveContact) {
