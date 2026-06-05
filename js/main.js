@@ -247,7 +247,7 @@
         submitBtn.disabled = false;
         submitBtn.textContent = originalText;
         showFormMessage(
-          'Unable to send your message right now. Please call us at (346) 254-7322 or email betterdaystherapywellness@gmail.com.',
+          'Unable to send your message right now. Please call us at (346) 254-7322 or try again in a few moments.',
           'error'
         );
       });
