@@ -1,0 +1,395 @@
+:root {
+  --teal: #1A6B72;
+  --teal-dark: #0f4a50;
+  --gold: #C9A84C;
+  --cream: #FAF7F2;
+  --charcoal: #1C2B2D;
+  --soft-teal: #D8F0F1;
+  --white: #FFFFFF;
+  --shadow: 0 24px 70px rgba(26, 107, 114, 0.22);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  background: var(--cream);
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+  font-family: 'DM Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: var(--charcoal);
+  background:
+    radial-gradient(circle at top left, rgba(201, 168, 76, 0.18), transparent 34rem),
+    radial-gradient(circle at bottom right, rgba(26, 107, 114, 0.16), transparent 32rem),
+    linear-gradient(135deg, #ffffff 0%, var(--cream) 52%, #eefafa 100%);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+}
+
+.card-page {
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  padding: clamp(1.25rem, 4vw, 2.5rem);
+}
+
+.brand-shell {
+  width: min(100%, 28rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+.home-link {
+  width: 7.25rem;
+  min-height: 7.25rem;
+  display: grid;
+  place-items: center;
+  padding: 0.55rem;
+  border-radius: 999px;
+  background: var(--white);
+  box-shadow: 0 16px 42px rgba(28, 43, 45, 0.12);
+  border: 1px solid rgba(26, 107, 114, 0.14);
+}
+
+.brand-logo {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: contain;
+  border-radius: 999px;
+  background: var(--white);
+}
+
+.eyebrow {
+  margin: 0;
+  color: var(--teal);
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-size: 0.73rem;
+}
+
+h1 {
+  margin: 0;
+  font-family: 'Playfair Display', Georgia, serif;
+  color: var(--charcoal);
+  font-size: clamp(2.05rem, 8vw, 3rem);
+  line-height: 1;
+}
+
+.intro {
+  margin: 0;
+  max-width: 26rem;
+  color: #31575b;
+  line-height: 1.65;
+  font-size: 0.98rem;
+}
+
+.flip-area {
+  width: min(100%, 23.5rem);
+  height: 30rem;
+  padding: 0;
+  margin: 0.4rem 0 0.2rem;
+  border: 0;
+  background: transparent;
+  perspective: 1200px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.business-card {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 680ms cubic-bezier(0.2, 0.72, 0.2, 1);
+}
+
+.flip-area.is-flipped .business-card {
+  transform: rotateY(180deg);
+}
+
+.card-face {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  padding: 2rem;
+  border-radius: 2rem;
+  overflow: hidden;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  box-shadow: var(--shadow);
+}
+
+.card-front {
+  color: var(--white);
+  background:
+    linear-gradient(145deg, rgba(15, 74, 80, 0.94), rgba(26, 107, 114, 0.9)),
+    radial-gradient(circle at 18% 18%, rgba(255,255,255,0.32), transparent 16rem);
+  border: 1px solid rgba(255, 255, 255, 0.38);
+}
+
+.card-front::before,
+.card-back::before {
+  content: "";
+  position: absolute;
+  width: 16rem;
+  height: 16rem;
+  border-radius: 999px;
+  border: 1px solid rgba(201, 168, 76, 0.35);
+  top: -5.5rem;
+  right: -5.5rem;
+}
+
+.logo-medallion {
+  width: 11rem;
+  height: 11rem;
+  display: grid;
+  place-items: center;
+  padding: 0.58rem;
+  background: var(--white);
+  border-radius: 999px;
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.18);
+  border: 3px solid rgba(201, 168, 76, 0.78);
+  z-index: 1;
+}
+
+.medallion-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 999px;
+  background: var(--white);
+}
+
+.card-name,
+.back-heading {
+  z-index: 1;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.55rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.card-title,
+.card-business,
+.card-note,
+.contact-line {
+  z-index: 1;
+}
+
+.card-title {
+  font-weight: 700;
+  color: #f6e5a6;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 0.82rem;
+}
+
+.card-business {
+  font-weight: 700;
+  max-width: 17rem;
+  font-size: 1rem;
+}
+
+.card-note {
+  margin-top: 0.55rem;
+  font-size: 0.82rem;
+  opacity: 0.86;
+}
+
+.card-back {
+  color: var(--charcoal);
+  background: linear-gradient(160deg, var(--white), #fdfbf6 70%, #eff9fa);
+  transform: rotateY(180deg);
+  border: 1px solid rgba(26, 107, 114, 0.16);
+}
+
+.back-heading {
+  color: var(--teal-dark);
+  margin-bottom: 0.45rem;
+}
+
+.contact-line {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.14rem;
+  padding: 0.78rem 0.9rem;
+  border-radius: 1rem;
+  background: rgba(216, 240, 241, 0.62);
+  color: #28484c;
+  text-align: left;
+  font-size: 0.93rem;
+}
+
+.contact-line strong {
+  color: var(--teal-dark);
+  font-size: 0.74rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.muted {
+  color: #5f7274;
+}
+
+.action-grid {
+  width: min(100%, 23.5rem);
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.action-button,
+.save-button,
+.qr-download {
+  min-height: 3.2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  transition: transform 170ms ease, box-shadow 170ms ease, background-color 170ms ease;
+}
+
+.action-button {
+  color: var(--teal-dark);
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(26, 107, 114, 0.18);
+  box-shadow: 0 10px 26px rgba(28, 43, 45, 0.08);
+}
+
+.action-button.primary,
+.save-button {
+  color: var(--white);
+  background: var(--teal);
+  border: 1px solid var(--teal);
+}
+
+.action-button:hover,
+.save-button:hover,
+.qr-download:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 32px rgba(26, 107, 114, 0.18);
+}
+
+.save-button {
+  width: min(100%, 23.5rem);
+  min-height: 3.65rem;
+  margin-top: 0.15rem;
+  font-size: 1.02rem;
+  box-shadow: 0 16px 36px rgba(26, 107, 114, 0.22);
+}
+
+.qr-panel {
+  width: min(100%, 23.5rem);
+  display: grid;
+  place-items: center;
+  gap: 0.65rem;
+  margin-top: 0.3rem;
+  padding: 1.15rem;
+  border-radius: 1.5rem;
+  background: rgba(255, 255, 255, 0.74);
+  border: 1px solid rgba(26, 107, 114, 0.14);
+  box-shadow: 0 14px 36px rgba(28, 43, 45, 0.08);
+}
+
+.qr-code {
+  width: 10.75rem;
+  border-radius: 1rem;
+  background: white;
+  padding: 0.45rem;
+  border: 1px solid rgba(26, 107, 114, 0.12);
+}
+
+.qr-panel p {
+  margin: 0;
+  color: #375a5e;
+  line-height: 1.5;
+  font-size: 0.88rem;
+}
+
+.qr-download {
+  min-height: auto;
+  color: var(--teal-dark);
+  font-size: 0.86rem;
+  text-decoration: underline;
+  text-underline-offset: 0.25rem;
+}
+
+.affirmation {
+  width: min(100%, 23.5rem);
+  margin: 0.4rem 0 0;
+  color: #49686b;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 0.98rem;
+  line-height: 1.55;
+}
+
+.card-footer {
+  color: #577174;
+  font-size: 0.8rem;
+  margin-top: 0.15rem;
+}
+
+.card-footer a {
+  color: var(--teal-dark);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+@media (max-width: 390px) {
+  .card-page {
+    padding: 1rem 0.8rem;
+  }
+
+  .flip-area {
+    height: 28.5rem;
+  }
+
+  .logo-medallion {
+    width: 9.5rem;
+    height: 9.5rem;
+  }
+
+  .card-face {
+    padding: 1.45rem;
+  }
+
+  .action-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.001ms !important;
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
