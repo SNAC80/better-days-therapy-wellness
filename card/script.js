@@ -2,10 +2,46 @@ const flipCard = document.getElementById('flipCard');
 const saveContact = document.getElementById('saveContact');
 
 if (flipCard) {
-  flipCard.addEventListener('click', () => {
-    const isFlipped = flipCard.classList.toggle('is-flipped');
+  const setFlippedState = (isFlipped) => {
+    flipCard.classList.toggle('is-flipped', isFlipped);
     flipCard.setAttribute('aria-pressed', String(isFlipped));
+  };
+
+  let isFlipped = false;
+  let autoFlipTimer;
+
+  const scheduleAutoFlip = () => {
+    window.clearInterval(autoFlipTimer);
+    autoFlipTimer = window.setInterval(() => {
+      isFlipped = !isFlipped;
+      setFlippedState(isFlipped);
+    }, 3600);
+  };
+
+  flipCard.addEventListener('click', (event) => {
+    if (event.target.closest('a')) return;
+    isFlipped = !isFlipped;
+    setFlippedState(isFlipped);
+    scheduleAutoFlip();
   });
+
+  flipCard.addEventListener('keydown', (event) => {
+    if (event.key !== 'Enter' && event.key !== ' ') return;
+    event.preventDefault();
+    isFlipped = !isFlipped;
+    setFlippedState(isFlipped);
+    scheduleAutoFlip();
+  });
+
+  flipCard.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', (event) => event.stopPropagation());
+  });
+
+  window.setTimeout(() => {
+    isFlipped = true;
+    setFlippedState(isFlipped);
+    scheduleAutoFlip();
+  }, 1600);
 }
 
 if (saveContact) {
