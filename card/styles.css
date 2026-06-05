@@ -193,10 +193,10 @@ h1 {
 }
 
 .logo-medallion-large {
-  width: min(76%, 17rem);
+  width: min(88%, 20rem);
   height: auto;
   aspect-ratio: 1;
-  padding: 0.75rem;
+  padding: 0.85rem;
 }
 
 .card-name,
@@ -427,7 +427,7 @@ h1 {
   }
 
   .logo-medallion-large {
-    width: min(76%, 15rem);
+    width: min(86%, 17rem);
     height: auto;
   }
 
