@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Schedule a Session | Better Days Therapy &amp; Wellness, PLLC</title>
+  <meta name="description" content="Ready to begin your healing journey? Schedule a session with Dr. Stephanie Booker by calling (346) 254-7322 or sending an email. Telehealth therapy available in Texas and Illinois." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://betterdaystherapywellness.com/schedule.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Better Days Therapy &amp; Wellness, PLLC" />
+  <meta property="og:title" content="Schedule a Session | Better Days Therapy &amp; Wellness, PLLC" />
+  <meta property="og:description" content="Ready to begin your healing journey? Schedule a session with Dr. Stephanie Booker by calling or emailing. Telehealth therapy in Texas and Illinois." />
+  <meta property="og:url" content="https://betterdaystherapywellness.com/schedule.html" />
+  <meta property="og:image" content="https://betterdaystherapywellness.com/assets/images/headshots/dr-booker-headshot.jpg" />
+  <link rel="icon" type="image/x-icon" href="/favicons/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
+  <link rel="manifest" href="/favicons/site.webmanifest" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/styles.css" />
+  <style>
+    /* ── Schedule Page Specific Styles ─────────────────────────────── */
+    .schedule-hero {
+      background: linear-gradient(135deg, #0d3d42 0%, #1A6B72 60%, #2a8a8f 100%);
+      padding: 5rem 0 4rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .schedule-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      pointer-events: none;
+    }
+    .schedule-hero .page-hero-label {
+      color: #C9A84C;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+    .schedule-hero h1 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(2rem, 5vw, 3.25rem);
+      font-weight: 700;
+      color: #ffffff;
+      margin: 0 auto 1.25rem;
+      max-width: 700px;
+      line-height: 1.2;
+    }
+    .schedule-hero p {
+      font-size: 1.125rem;
+      color: rgba(255,255,255,0.85);
+      max-width: 560px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    /* ── How It Works Steps ─────────────────────────────────────────── */
+    .steps-section {
+      background: #f8f5ef;
+      padding: 4.5rem 0;
+    }
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    .step-card {
+      background: #ffffff;
+      border-radius: 1rem;
+      padding: 2rem 1.75rem;
+      text-align: center;
+      border: 1.5px solid rgba(26,107,114,0.12);
+      box-shadow: 0 2px 16px rgba(26,107,114,0.07);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .step-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 28px rgba(26,107,114,0.13);
+    }
+    .step-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #1A6B72, #2a8a8f);
+      color: #ffffff;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 1.25rem;
+    }
+    .step-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #1C2B2D;
+      margin-bottom: 0.625rem;
+    }
+    .step-card p {
+      font-size: 0.9rem;
+      color: #4a6568;
+      line-height: 1.65;
+    }
+
+    /* ── Contact Method Cards ───────────────────────────────────────── */
+    .contact-methods-section {
+      background: #ffffff;
+      padding: 5rem 0;
+    }
+    .contact-methods-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+      margin-top: 3rem;
+    }
+    @media (max-width: 680px) {
+      .contact-methods-grid { grid-template-columns: 1fr; }
+    }
+    .contact-method-card {
+      border-radius: 1.25rem;
+      padding: 3rem 2.5rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .contact-method-card.call-card {
+      background: linear-gradient(145deg, #0d3d42 0%, #1A6B72 100%);
+      color: #ffffff;
+    }
+    .contact-method-card.email-card {
+      background: #f8f5ef;
+      border: 2px solid rgba(26,107,114,0.2);
+      color: #1C2B2D;
+    }
+    .contact-method-icon {
+      font-size: 3rem;
+      margin-bottom: 1.25rem;
+      display: block;
+    }
+    .contact-method-card h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+    }
+    .call-card h2 { color: #ffffff; }
+    .email-card h2 { color: #1C2B2D; }
+    .contact-method-card .method-desc {
+      font-size: 1rem;
+      line-height: 1.7;
+      margin-bottom: 2rem;
+    }
+    .call-card .method-desc { color: rgba(255,255,255,0.85); }
+    .email-card .method-desc { color: #4a6568; }
+    .contact-method-card .method-detail {
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      margin-bottom: 1.75rem;
+      display: block;
+    }
+    .call-card .method-detail { color: #C9A84C; }
+    .email-card .method-detail { color: #1A6B72; font-size: 1.1rem; }
+    .btn-white-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.875rem 2rem;
+      border: 2px solid rgba(255,255,255,0.7);
+      border-radius: 0.5rem;
+      color: #ffffff;
+      font-weight: 600;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: background 0.2s ease, border-color 0.2s ease;
+    }
+    .btn-white-outline:hover {
+      background: rgba(255,255,255,0.12);
+      border-color: #ffffff;
+    }
+
+    /* ── What to Expect ─────────────────────────────────────────────── */
+    .expect-section {
+      background: #f8f5ef;
+      padding: 5rem 0;
+    }
+    .expect-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.75rem;
+      margin-top: 3rem;
+    }
+    .expect-item {
+      display: flex;
+      gap: 1.25rem;
+      align-items: flex-start;
+    }
+    .expect-icon {
+      flex-shrink: 0;
+      width: 2.75rem;
+      height: 2.75rem;
+      border-radius: 50%;
+      background: rgba(26,107,114,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+    }
+    .expect-item h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #1C2B2D;
+      margin-bottom: 0.375rem;
+    }
+    .expect-item p {
+      font-size: 0.9rem;
+      color: #4a6568;
+      line-height: 1.65;
+    }
+
+    /* ── Reassurance Banner ─────────────────────────────────────────── */
+    .reassurance-section {
+      background: linear-gradient(135deg, #1A6B72 0%, #0d3d42 100%);
+      padding: 4rem 0;
+      text-align: center;
+    }
+    .reassurance-section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.5rem, 3vw, 2.25rem);
+      color: #ffffff;
+      margin-bottom: 1rem;
+    }
+    .reassurance-section p {
+      color: rgba(255,255,255,0.85);
+      font-size: 1.05rem;
+      max-width: 560px;
+      margin: 0 auto 2rem;
+      line-height: 1.7;
+    }
+
+    /* ── FAQ Accordion ──────────────────────────────────────────────── */
+    .schedule-faq {
+      background: #ffffff;
+      padding: 5rem 0;
+    }
+    .faq-list {
+      max-width: 760px;
+      margin: 3rem auto 0;
+    }
+    .faq-item {
+      border-bottom: 1.5px solid rgba(26,107,114,0.12);
+    }
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 1.5rem 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      cursor: pointer;
+      text-align: left;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #1C2B2D;
+      transition: color 0.2s ease;
+    }
+    .faq-question:hover { color: #1A6B72; }
+    .faq-question[aria-expanded="true"] { color: #1A6B72; }
+    .faq-chevron {
+      flex-shrink: 0;
+      width: 1.25rem;
+      height: 1.25rem;
+      color: #1A6B72;
+      transition: transform 0.25s cubic-bezier(0.23,1,0.32,1);
+    }
+    .faq-question[aria-expanded="true"] .faq-chevron {
+      transform: rotate(180deg);
+    }
+    .faq-answer {
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.35s cubic-bezier(0.23,1,0.32,1);
+    }
+    .faq-answer-inner {
+      padding: 0 0 1.5rem;
+      font-size: 0.95rem;
+      color: #4a6568;
+      line-height: 1.75;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="/" class="nav-wordmark" aria-label="Better Days Therapy &amp; Wellness, PLLC — Home">Better Days Therapy &amp; Wellness, PLLC</a>
+        <ul class="nav-links" role="list">
+          <li><a href="/" class="nav-link">Home</a></li>
+          <li><a href="/about.html" class="nav-link">About</a></li>
+          <li><a href="/services.html" class="nav-link">Healing Options</a></li>
+          <li><a href="/insurance.html" class="nav-link">Insurance</a></li>
+          <li><a href="/blog.html" class="nav-link">Blog</a></li>
+          <li><a href="/contact.html" class="nav-link">Contact</a></li>
+          <li><a href="/schedule.html" class="btn btn-primary nav-cta">🌿 Schedule a Session Today</a></li>
+        </ul>
+        <button class="hamburger" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open navigation menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div id="mobile-menu" class="mobile-menu" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <button id="mobile-close" aria-label="Close menu" style="position:absolute;top:1.25rem;right:1.25rem;background:none;border:none;cursor:pointer;font-size:1.5rem;color:#1C2B2D;padding:0.5rem;">✕</button>
+    <div style="margin-bottom:2rem;"><img src="/assets/logos/BetterDayslogofinal.png" alt="Better Days Therapy &amp; Wellness" width="72" height="72" style="object-fit:contain;" /></div>
+    <a href="/" class="mobile-nav-link">Home</a>
+    <a href="/about.html" class="mobile-nav-link">About</a>
+    <a href="/services.html" class="mobile-nav-link">Healing Options</a>
+    <a href="/insurance.html" class="mobile-nav-link">Insurance</a>
+    <a href="/blog.html" class="mobile-nav-link">Blog</a>
+    <a href="/contact.html" class="mobile-nav-link">Contact</a>
+    <div style="margin-top:2rem;"><a href="/schedule.html" class="btn btn-primary" style="width:100%;justify-content:center;">🌿 Schedule a Session Today</a></div>
+  </div>
+
+  <main id="main-content" tabindex="-1">
+
+    <!-- ── Page Hero ────────────────────────────────────────────────── -->
+    <header class="schedule-hero" aria-label="Schedule a session page header">
+      <div class="container">
+        <p class="page-hero-label">Take the First Step</p>
+        <h1>Schedule Your Session</h1>
+        <p>Reaching out is the bravest part. Dr. Booker is ready to walk alongside you — simply call or send an email to get started.</p>
+      </div>
+    </header>
+
+    <!-- ── How It Works ─────────────────────────────────────────────── -->
+    <section class="steps-section" aria-labelledby="steps-heading">
+      <div class="container">
+        <div class="fade-up text-center">
+          <span class="section-label">Simple Process</span>
+          <div class="gold-rule" style="margin:0 auto 1rem;" aria-hidden="true"></div>
+          <h2 id="steps-heading">How to Get Started</h2>
+          <p style="max-width:560px;margin:0.75rem auto 0;color:#4a6568;">Getting started is straightforward. Here is what you can expect from your first contact to your first session.</p>
+        </div>
+        <div class="steps-grid">
+          <div class="step-card fade-up delay-1">
+            <div class="step-number" aria-hidden="true">1</div>
+            <h3>Reach Out</h3>
+            <p>Call Dr. Booker directly or send an email at a time that feels right for you. There is no obligation — just a conversation.</p>
+          </div>
+          <div class="step-card fade-up delay-2">
+            <div class="step-number" aria-hidden="true">2</div>
+            <h3>Brief Consultation</h3>
+            <p>Dr. Booker will connect with you to understand your needs, answer your questions, and confirm that the practice is a good fit.</p>
+          </div>
+          <div class="step-card fade-up delay-3">
+            <div class="step-number" aria-hidden="true">3</div>
+            <h3>Confirm Your Appointment</h3>
+            <p>Once you are ready, you will receive your session details — including the secure telehealth link and any intake paperwork.</p>
+          </div>
+          <div class="step-card fade-up delay-4">
+            <div class="step-number" aria-hidden="true">4</div>
+            <h3>Begin Your Journey</h3>
+            <p>Join your first session from the comfort of your home. Healing begins with showing up — and you have already taken that step.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Contact Methods ───────────────────────────────────────────── -->
+    <section class="contact-methods-section" aria-labelledby="contact-methods-heading">
+      <div class="container">
+        <div class="fade-up text-center">
+          <span class="section-label">Two Ways to Connect</span>
+          <div class="gold-rule" style="margin:0 auto 1rem;" aria-hidden="true"></div>
+          <h2 id="contact-methods-heading">Choose What Feels Right for You</h2>
+          <p style="max-width:560px;margin:0.75rem auto 0;color:#4a6568;">Whether you prefer to hear a voice or write your thoughts first, Dr. Booker is available both ways.</p>
+        </div>
+        <div class="contact-methods-grid fade-up delay-1">
+
+          <!-- Call Card -->
+          <div class="contact-method-card call-card">
+            <span class="contact-method-icon" aria-hidden="true">📞</span>
+            <h2>Call to Schedule</h2>
+            <p class="method-desc">Speaking directly with Dr. Booker is often the fastest way to get your questions answered and your first appointment confirmed. Calls are welcomed during business hours.</p>
+            <span class="method-detail">(346) 254-7322</span>
+            <div style="margin-bottom:1.25rem;">
+              <p style="font-size:0.85rem;color:rgba(255,255,255,0.7);margin-bottom:0.5rem;">Monday – Friday &nbsp;|&nbsp; 9:00 AM – 5:00 PM CT</p>
+              <p style="font-size:0.85rem;color:rgba(255,255,255,0.7);">If you reach voicemail, please leave your name and a good callback number. Dr. Booker will return your call within one business day.</p>
+            </div>
+            <a href="tel:+13462547322" class="btn-white-outline" aria-label="Call Dr. Booker at (346) 254-7322">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.44 2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.13 6.13l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              Call Now
+            </a>
+          </div>
+
+          <!-- Email Card -->
+          <div class="contact-method-card email-card">
+            <span class="contact-method-icon" aria-hidden="true">✉️</span>
+            <h2>Send an Email</h2>
+            <p class="method-desc">Prefer to write? Send Dr. Booker an email with a brief description of what you are looking for and the best way to reach you. All messages are kept strictly confidential.</p>
+            <span class="method-detail">betterdaystherapywellness<wbr>@gmail.com</span>
+            <div style="margin-bottom:1.75rem;">
+              <p style="font-size:0.85rem;color:#4a6568;margin-bottom:0.5rem;">Please include your name, a brief description of what brings you here, and your preferred contact method.</p>
+              <p style="font-size:0.85rem;color:#4a6568;">Expect a response within one to two business days. For urgent concerns, please call directly.</p>
+            </div>
+            <a href="mailto:betterdaystherapywellness@gmail.com?subject=Session%20Request%20—%20Better%20Days%20Therapy" class="btn btn-primary" style="display:inline-flex;align-items:center;gap:0.5rem;" aria-label="Send an email to Dr. Booker">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              Send Email
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── What to Expect ────────────────────────────────────────────── -->
+    <section class="expect-section" aria-labelledby="expect-heading">
+      <div class="container">
+        <div class="fade-up text-center">
+          <span class="section-label">Your First Session</span>
+          <div class="gold-rule" style="margin:0 auto 1rem;" aria-hidden="true"></div>
+          <h2 id="expect-heading">What to Expect</h2>
+          <p style="max-width:560px;margin:0.75rem auto 0;color:#4a6568;">The first session is about connection, not pressure. Here is what the experience looks like.</p>
+        </div>
+        <div class="expect-grid fade-up delay-1">
+          <div class="expect-item">
+            <div class="expect-icon" aria-hidden="true">🏠</div>
+            <div>
+              <h3>Join From Anywhere</h3>
+              <p>All sessions are conducted via telehealth. You will receive a secure video link before your appointment. All you need is a private space and a device with a camera.</p>
+            </div>
+          </div>
+          <div class="expect-item">
+            <div class="expect-icon" aria-hidden="true">📋</div>
+            <div>
+              <h3>Brief Intake Paperwork</h3>
+              <p>Before your first session, you will complete a short intake form so Dr. Booker can understand your background and goals before you meet.</p>
+            </div>
+          </div>
+          <div class="expect-item">
+            <div class="expect-icon" aria-hidden="true">🤝</div>
+            <div>
+              <h3>A Conversation, Not an Evaluation</h3>
+              <p>Your first session is a chance to get to know each other. Dr. Booker will listen, ask thoughtful questions, and begin to understand what healing looks like for you.</p>
+            </div>
+          </div>
+          <div class="expect-item">
+            <div class="expect-icon" aria-hidden="true">🔒</div>
+            <div>
+              <h3>Fully Confidential</h3>
+              <p>Everything shared in session is protected by HIPAA and professional ethics. Your privacy is not just a legal requirement — it is a core value of this practice.</p>
+            </div>
+          </div>
+          <div class="expect-item">
+            <div class="expect-icon" aria-hidden="true">💳</div>
+            <div>
+              <h3>Insurance &amp; Fees</h3>
+              <p>Better Days Therapy &amp; Wellness accepts several insurance plans and offers self-pay options. <a href="/insurance.html" style="color:#1A6B72;font-weight:600;text-decoration:none;">View insurance &amp; fee details →</a></p>
+            </div>
+          </div>
+          <div class="expect-item">
+            <div class="expect-icon" aria-hidden="true">🌿</div>
+            <div>
+              <h3>No Pressure to Continue</h3>
+              <p>You are never locked in. After the first session, you and Dr. Booker will discuss whether continuing together feels like the right fit — the decision is always yours.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Reassurance Banner ────────────────────────────────────────── -->
+    <section class="reassurance-section" aria-labelledby="reassurance-heading">
+      <div class="container">
+        <div class="fade-up">
+          <h2 id="reassurance-heading">You Do Not Have to Have It All Figured Out</h2>
+          <p>Many people reach out before they know exactly what they need. That is completely okay. Dr. Booker's role is to help you find clarity — you just need to take the first step.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;">
+            <a href="tel:+13462547322" class="btn btn-gold btn-lg" aria-label="Call Dr. Booker">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin-right:0.375rem;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.44 2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.13 6.13l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              Call (346) 254-7322
+            </a>
+            <a href="mailto:betterdaystherapywellness@gmail.com?subject=Session%20Request%20—%20Better%20Days%20Therapy" class="btn-white-outline" aria-label="Send an email to Dr. Booker">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              Send an Email
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Scheduling FAQ ────────────────────────────────────────────── -->
+    <section class="schedule-faq" aria-labelledby="faq-heading">
+      <div class="container">
+        <div class="fade-up text-center">
+          <span class="section-label">Common Questions</span>
+          <div class="gold-rule" style="margin:0 auto 1rem;" aria-hidden="true"></div>
+          <h2 id="faq-heading">Scheduling FAQ</h2>
+        </div>
+        <div class="faq-list fade-up delay-1" role="list">
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-a1">
+              How quickly can I get an appointment?
+              <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer" id="faq-a1" role="region">
+              <div class="faq-answer-inner">Appointment availability varies, but Dr. Booker makes every effort to schedule new clients within one to two weeks of initial contact. Reach out by phone or email and she will let you know current availability.</div>
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-a2">
+              Do I need a referral to schedule?
+              <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer" id="faq-a2" role="region">
+              <div class="faq-answer-inner">No referral is needed. You can contact Dr. Booker directly to schedule. If your insurance requires a referral for coverage purposes, please check with your plan before your first session.</div>
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-a3">
+              What if I need to cancel or reschedule?
+              <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer" id="faq-a3" role="region">
+              <div class="faq-answer-inner">Life happens. Please provide at least 24 hours notice if you need to cancel or reschedule. You can call or send an email to make changes. Late cancellations or no-shows may be subject to a fee, which will be discussed during your intake.</div>
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-a4">
+              How long is a typical session?
+              <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer" id="faq-a4" role="region">
+              <div class="faq-answer-inner">Individual therapy sessions are typically 50 to 60 minutes. Couples and group sessions may vary in length. Dr. Booker will confirm session duration when you schedule.</div>
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-a5">
+              What do I need for a telehealth session?
+              <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer" id="faq-a5" role="region">
+              <div class="faq-answer-inner">You will need a smartphone, tablet, or computer with a working camera and microphone, a stable internet connection, and a private space where you feel comfortable speaking freely. Dr. Booker uses a HIPAA-compliant video platform — no special software download is required.</div>
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-a6">
+              Is my information kept confidential?
+              <svg class="faq-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer" id="faq-a6" role="region">
+              <div class="faq-answer-inner">Yes. All information shared in therapy is protected by HIPAA and the ethical standards of the counseling profession. Dr. Booker will review the limits of confidentiality with you during your first session so you understand exactly what is and is not protected.</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" aria-label="Site footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-logo"><img src="/assets/logos/BetterDayslogofinal.png" alt="Better Days Therapy &amp; Wellness" width="60" height="60" /></div>
+          <p class="footer-tagline">Guiding your growth. Empowering your path to healing. Compassionate behavioral health services for individuals, couples, and families — wherever you are in your journey.</p>
+          <p class="footer-quote">"Remember that every stumbling block is merely a stepping stone on your pathway to success."</p>
+          <p class="footer-quote-attr">— Dr. Stephanie Booker</p>
+        </div>
+        <div>
+          <h3 class="footer-heading">Quick Links</h3>
+          <a href="/" class="footer-link">Home</a>
+          <a href="/about.html" class="footer-link">About Dr. Booker</a>
+          <a href="/services.html" class="footer-link">Healing Options</a>
+          <a href="/insurance.html" class="footer-link">Insurance &amp; Fees</a>
+          <a href="/blog.html" class="footer-link">Healing Insights Blog</a>
+          <a href="/contact.html" class="footer-link">Contact &amp; Scheduling</a>
+        </div>
+        <div>
+          <h3 class="footer-heading">Contact Information</h3>
+          <p class="footer-contact-label">Phone</p>
+          <p class="footer-contact-value"><a href="tel:+13462547322">(346) 254-7322</a></p>
+          <p class="footer-contact-value">
+            <a href="mailto:betterdaystherapywellness@gmail.com" style="color:#1A6B72;font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:0.375rem;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              Email
+            </a>
+          </p>
+          <p class="footer-contact-label">Service Area</p>
+          <p class="footer-contact-value">Houston, Texas &amp; Beyond<br>Telehealth: Texas &amp; Illinois</p>
+          <p class="footer-contact-label">License</p>
+          <p class="footer-contact-value">LPC — Texas &amp; Illinois</p>
+        </div>
+      </div>
+      <hr class="footer-divider" />
+      <div class="footer-bottom">
+        <p>© <span id="footer-year"></span> Better Days Therapy &amp; Wellness, PLLC. All Rights Reserved.</p>
+        <div class="footer-legal-links">
+          <a href="/privacy.html" class="footer-legal-link">Privacy Policy</a>
+          <a href="/terms.html" class="footer-legal-link">Terms of Service</a>
+          <a href="/disclaimer.html" class="footer-legal-link">Disclaimer</a>
+        </div>
+        <p class="footer-built-by">Built by <a href="https://www.kiraunistrategies.com" target="_blank" rel="noopener noreferrer">Kirauni Strategies</a> | Where Strategy Meets Excellence</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="consent-banner" class="consent-banner dismissed" role="region" aria-label="Privacy consent notice" style="display:none;">
+    <p class="consent-text">We respect your privacy. This site uses cookies to improve your experience. By continuing, you agree to our <a href="/privacy.html">Privacy Policy</a>.</p>
+    <div class="consent-actions">
+      <button id="consent-accept" class="consent-accept" aria-label="Accept cookies and dismiss this notice">Accept</button>
+      <a id="consent-learn" href="/privacy.html" class="consent-learn" aria-label="Learn more about our privacy policy">Learn More</a>
+    </div>
+  </div>
+
+  <script src="/js/main.js" defer></script>
+  <script>
+    document.getElementById('footer-year').textContent = new Date().getFullYear();
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        // close all
+        document.querySelectorAll('.faq-question').forEach(b => {
+          b.setAttribute('aria-expanded', 'false');
+          const ans = document.getElementById(b.getAttribute('aria-controls'));
+          if (ans) ans.style.maxHeight = '0';
+        });
+        // open clicked if it was closed
+        if (!expanded) {
+          btn.setAttribute('aria-expanded', 'true');
+          const ans = document.getElementById(btn.getAttribute('aria-controls'));
+          if (ans) ans.style.maxHeight = ans.scrollHeight + 'px';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
