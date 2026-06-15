@@ -198,9 +198,15 @@
     }
     .expect-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(3, 1fr);
       gap: 1.75rem;
       margin-top: 3rem;
+    }
+    @media (max-width: 900px) {
+      .expect-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 560px) {
+      .expect-grid { grid-template-columns: 1fr; }
     }
     .expect-item {
       display: flex;
@@ -418,7 +424,6 @@
             <span class="contact-method-icon" aria-hidden="true">✉️</span>
             <h2>Send an Email</h2>
             <p class="method-desc">Prefer to write? Send Dr. Booker an email with a brief description of what you are looking for and the best way to reach you. All messages are kept strictly confidential.</p>
-            <span class="method-detail">betterdaystherapywellness<wbr>@gmail.com</span>
             <div style="margin-bottom:1.75rem;">
               <p style="font-size:0.85rem;color:#4a6568;margin-bottom:0.5rem;">Please include your name, a brief description of what brings you here, and your preferred contact method.</p>
               <p style="font-size:0.85rem;color:#4a6568;">Expect a response within one to two business days. For urgent concerns, please call directly.</p>
